@@ -30,7 +30,6 @@ public class Constants {
    * The name of the service to authorize for.
    */
   public static final String OAUTH_SCOPE = "oauth2:https://www.googleapis.com/auth/calendar";
-  // public static final String OAUTH_SCOPE = "Manage your calendars";
 
   /**
    * Preference keys.
