@@ -1,0 +1,5 @@
+Meeting-Scheduler is an example implementation of an Android app using Google
+Calendar API v3 with Google APIs Java client 1.6.0-beta.
+
+For instructions on running your own instance of Au-to-do, see:
+http://code.google.com/p/google-meeting-scheduler/wiki/GettingStarted

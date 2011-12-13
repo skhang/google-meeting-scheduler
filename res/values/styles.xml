@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MeetingSchedulerTheme" parent="android:Theme">
+          <item name="android:windowTitleSize">?android:attr/listPreferredItemHeight</item>
+     </style>
+</resources>
