@@ -186,9 +186,11 @@ public class OAuthManager {
                 Log.e(Constants.TAG, "Got auth token: " + invalidate);
                 authToken = result.getString(AccountManager.KEY_AUTHTOKEN);
                 if (invalidate) {
+                  // Invalidate the current token and request a new one.
                   accountManager.invalidateAuthToken(Constants.ACCOUNT_TYPE, authToken);
                   authorize(account, false, context, callback);
                 } else {
+                  // Return the token to the callback.
                   callback.handleAuth(account, authToken);
                 }
               }
