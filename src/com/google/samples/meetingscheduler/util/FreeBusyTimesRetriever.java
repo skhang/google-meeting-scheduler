@@ -20,6 +20,7 @@ import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpResponseException;
 import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.Calendar;
+import com.google.api.services.calendar.Calendar.Freebusy;
 import com.google.api.services.calendar.model.FreeBusyCalendar;
 import com.google.api.services.calendar.model.FreeBusyRequest;
 import com.google.api.services.calendar.model.FreeBusyRequestItem;
@@ -82,7 +83,10 @@ public class FreeBusyTimesRetriever {
 
     FreeBusyResponse busyTimes;
     try {
-      busyTimes = service.freebusy().query(request).execute();
+      Freebusy.Query query = service.freebusy().query(request);
+      // Use partial GET to only retrieve needed fields.
+      query.setFields("calendars");
+      busyTimes = query.execute();
       for (Map.Entry<String, FreeBusyCalendar> busyCalendar : busyTimes.getCalendars().entrySet()) {
         result.put(busyCalendar.getKey(), busyCalendar.getValue().getBusy());
       }
