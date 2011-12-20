@@ -33,7 +33,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -77,14 +76,6 @@ public class SelectMeetingTimeActivity extends Activity {
 
   private List<String> selectedAttendees;
   private List<AvailableMeetingTime> availableMeetingTimes;
-
-  /**
-   * Cancel Activity re-launch when screen orientation changes.
-   */
-  @Override
-  public void onConfigurationChanged(Configuration newConfig) {
-    super.onConfigurationChanged(newConfig);
-  }
 
   /**
    * Called when the activity is first created.

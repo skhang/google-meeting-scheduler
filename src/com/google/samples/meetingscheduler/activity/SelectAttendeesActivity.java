@@ -26,7 +26,6 @@ import com.google.samples.meetingscheduler.util.OAuthManager;
 import android.accounts.Account;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -66,14 +65,6 @@ public class SelectAttendeesActivity extends Activity {
   /** UI Attributes. */
   private Handler handler = new Handler();
   private ProgressDialog progressBar;
-
-  /**
-   * Cancel Activity re-launch when screen orientation changes.
-   */
-  @Override
-  public void onConfigurationChanged(Configuration newConfig) {
-    super.onConfigurationChanged(newConfig);
-  }
 
   /** Called when the activity is first created. */
   @Override

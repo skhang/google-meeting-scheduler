@@ -33,7 +33,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -76,14 +75,6 @@ public class CreateEventActivity extends Activity {
   List<String> selectedAttendees;
   private DateTime startDate;
   private DateTime endDate;
-
-  /**
-   * Cancel Activity re-launch when screen orientation changes.
-   */
-  @Override
-  public void onConfigurationChanged(Configuration newConfig) {
-    super.onConfigurationChanged(newConfig);
-  }
 
   /** Called when the activity is first created. */
   @Override
