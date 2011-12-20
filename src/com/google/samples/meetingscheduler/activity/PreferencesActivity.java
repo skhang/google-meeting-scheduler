@@ -14,7 +14,6 @@ import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -45,14 +44,6 @@ public class PreferencesActivity extends PreferenceActivity {
     Intent intent = new Intent(context, PreferencesActivity.class);
     intent.setClass(context, PreferencesActivity.class);
     return intent;
-  }
-
-  /**
-   * Cancel Activity re-launch when screen orientation changes.
-   */
-  @Override
-  public void onConfigurationChanged(Configuration newConfig) {
-    super.onConfigurationChanged(newConfig);
   }
 
   /**
